@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/result.css">
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+    <table class="container-table">
+        <tr class="box-sheet">
+          <td>Companhia:</td>
+          <td><%= name %></td>
+          <td>Preço: </td>
+          <td>$<%= price %></td>
+        </tr>
+        <tr>
+          <td>Ticker:</td>
+          <td><%= symbol %></td>
+          <td>Preço de Abertura: </td>
+          <td>$<%= priceOpen %></td>
+        
+        </tr>
+        <tr>
+          <td>Bolsa:</td>
+          <td><%= exchange %></td> 
+          <td>Preço de Fechamento: </td>
+          <td>$<%= priceClose %></td>     
+        </tr>
+        <tr>
+          <td>Valor de Mercado:</td>
+          <td>$<%= marketCap %></td> 
+          <td>Variação Diária: </td>
+          <td><%= changeOnDay %>%</td>  
+        </tr>
+        <tr>
+          <td>Ações em circulação:</td>
+          <td>$<%= sharesOutstanding %></td>
+          <td>Preço Médio (50 dias): </td>
+          <td>$<%= priceAvg50 %></td>   
+        </tr>
+        <tr>
+          <td>Volume ($):</td>
+          <td>$<%= volume %></td> 
+          <td>Preço Médio (200 dias): </td>
+          <td>$<%= priceAvg200 %></td> 
+        </tr>
+        <tr>
+          <td>Volume Médio ($):</td>
+          <td>$<%= avgVolume %></td>
+          <td>Lucro Por Ação (12M): </td>
+          <td>$<%= EPS %></td> 
+        </tr>
+        <tr>
+          <td>Último Release:</td>
+          <td><%= earningsDate %></td>
+          <td>Preço Sobre Lucro: </td>
+          <td><%= PE %>x</td> 
+        </tr>
+      </table>
+
+      <form action="/">
+        <button class="btn"> Search again ⬅ </button>
+      </form>
+
+
+
+
+    <script src="utf8.js"></script>
+</body>
+
+    <footer>
+      © Copyright 2022 Breno Bonani 
+    </footer>
+
+</html>
