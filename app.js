@@ -7,7 +7,6 @@ const ejs = require("ejs");
 
 const app = express();
 
-module.exports = app;
 
 require("dotenv").config();
 
