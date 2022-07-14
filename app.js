@@ -7,6 +7,8 @@ const ejs = require("ejs");
 
 const app = express();
 
+module.exports = app;
+
 require("dotenv").config();
 
 app.use(bodyParser.urlencoded({extended: true}));
