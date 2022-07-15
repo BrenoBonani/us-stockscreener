@@ -19,9 +19,9 @@ app.set('view engine', 'ejs');
 
 // app post 
 app.post("/", (req, res) => {
-    const apiKey = process.env.API_KEY;
+    const apiKey = "1d9064769ea77d8bccb50073e97552a2";
     const queryTicker = req.body.tickerName.toUpperCase();
-    const url = process.env.URL_KEY + queryTicker + "?apikey=" + apiKey;
+    const url = "https://financialmodelingprep.com/api/v3/quote/" + queryTicker + "?apikey=" + apiKey;
     
 
 // https for response the data
@@ -85,7 +85,7 @@ app.get("/", function(req, res){
 
 // app listen
 app.listen(process.env.PORT || 3000, function(){
-    console.log("Server is running");
+    console.log("Server is running on port 3000");
 });
 
 
