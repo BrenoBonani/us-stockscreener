@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
@@ -8,7 +10,6 @@ const ejs = require("ejs");
 const app = express();
 
 
-require("dotenv").config();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -19,9 +20,9 @@ app.set('view engine', 'ejs');
 
 // app post 
 app.post("/", (req, res) => {
-    const apiKey = "1d9064769ea77d8bccb50073e97552a2";
+    const apiKey = process.env.API_KEY;
     const queryTicker = req.body.tickerName.toUpperCase();
-    const url = "https://financialmodelingprep.com/api/v3/quote/" + queryTicker + "?apikey=" + apiKey;
+    const url = process.env.URL_API + queryTicker + "?apikey=" + apiKey;
     
 
 // https for response the data
