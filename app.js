@@ -88,26 +88,3 @@ app.get("/", function(req, res){
 app.listen(process.env.PORT || 3000, function(){
     console.log("Server is running on port 3000");
 });
-
-
-
-  // res.setHeader("Content-Type", "text/html; charset=utf-8");
-        
-        // res.write("<button onclick='window.history.go(-1); return false'> Search Again </button>");
-        // res.write("<br>");
-        // res.write("<p> Ticker: " + symbol + "</p>");
-        // res.write("<p> Nome: " + name + "</p>");
-        // res.write("<p> Bolsa: " + exchange + "</p>");
-        // res.write("<br>");
-        // res.write("<p> Preço: $" + price + "</p>");
-        // res.write("<p> Preço Abertura: $" + priceOpen + "</p>");
-        // res.write("<p> Preço Fechamento: $" + priceClose + "</p>");
-        // res.write("<p> Variação Diária: " + changeOnDay + "% </p>");
-        // res.write("<p> Market Cap: $" + marketCap + " </p>");
-        // res.write("<p> Volume: $" + volume + " </p>");
-        // res.write("<p> Volume Médio: $" + avgVolume + " </p>");
-        // res.write("<p> Ações em Circulação: " + sharesOutstanding + " </p>");
-        // res.write("<br>");
-        // res.write("<p> Lucro por Ação: $" + EPS + " </p>");
-        // res.write("<p> P/L: " + PE + "x</p>");
-        // res.write("<p> DY: " + DY + "</p>");
