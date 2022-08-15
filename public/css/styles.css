@@ -22,7 +22,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 3.5rem;
-    margin: 8% auto 3%;
+    margin: 5% auto 2%;
 }
 
 ::placeholder {
@@ -39,12 +39,12 @@ h1 {
 }
 
 .guide-section {
-    margin-top: 3%;
+    margin-top: 5%;
     color: #212121;
 }
 
+
 .btn {
-    display: inline-block;
     color: #090909;
     padding: 0.7em 1.7em;
     font-size: 18px;
@@ -54,8 +54,9 @@ h1 {
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #fff;
-    margin: 20px auto;
-  
+    margin: 20px 5px auto;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn:hover {
@@ -68,6 +69,10 @@ h1 {
 	top:1px;
 }
 
+.head-form {
+    display: inline-flex;
+}
+
 footer {
     position: absolute;
     text-align: center;
@@ -78,4 +83,14 @@ footer {
     padding: 30px 0;
  
   }
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .guide-section {
+        margin-top: 15%;
+    }
+}
   

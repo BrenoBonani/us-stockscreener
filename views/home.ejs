@@ -1,45 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("partials/header"); -%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+<header>
 
-    <!-- google fonts -->
+</header>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<h1 class="heading"> US Stock Finder </h1>
 
-
-</head>
-
-<body>
-
-    <header>
-        
-    </header>
-
-    <form class="form-group" action="/" method="post">
-        <h1 class="heading"> US Stock Finder </h1>
-        <input class="form-control" id="tickerInput" type="text" name="tickerName" placeholder="US Ticker">
-        <br>
-        <button class="btn" type="submit" name="submit"> Search </button>
+<div class="head-form">
+    <form class="form-group" action="/overview">
+        <button class="btn"> Overview </button>
     </form>
+    <form class="form-group" action="/balance_sheet_hp">
+        <button class="btn"> Balance Sheet </button>
+    </form>
+</div>
+<br>
+<div class="head-form">
+    <form class="form-group" action="/earnings_hp">
+        <button class="btn"> Earnings </button>
+    </form>
+    <form class="form-group" action="ratio_hp">
+        <button class="btn"> Annual Ratios </button>
+    </form>
+</div>
+<div class="head-form">
+    <a class="form-group" href="https://bugg.com.br/category/buggpedia/page/10/">
+        <button class="btn" type="submit"> Buggpedia </button>
+    </a>
+</div>
 
-    <section class="guide-section">
-        <p>1) Insert one US Stock Ticker</p>
-        <p>2) Use the button to Search</p>
-    </section>
 
-    <script src="utf8.js"></script>
-</body>
 
-    <footer>
-        © Copyright 2022 Breno Bonani 
-    </footer>
 
-</html>
+<section class="guide-section">
+    <p>1) Clique em alguma opção </p>
+    <p>2) Acesse a homepage da opção </p>
+    <p>3) Pesquise pelo ticker a companhia que você deseja </p>
+    <p>4) Ficou com dúvida? Clique no Buggpedia e pesquise sobre algum indicador! </p>
+</section>
+
+
+<%- include("partials/footer"); -%>

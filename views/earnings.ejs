@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <title>Earnings Statements</title>
+    <link rel="stylesheet" href="css/result.css">
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+    <table class="container-table">
+        <tr class="box-sheet">
+          <td>Ticker:</td>
+          <td><%= symbol %></td>
+          <td>Data:</td>
+          <td><%= date %></td>
+        </tr>
+        <tr>
+          <td>Moeda:</td>
+          <td><%= reportedCurrency %></td>
+          <td>Receita: </td>
+          <td>$<%= revenue %></td>
+        </tr>
+        <tr>
+          <td>CPV/CSP:</td>
+          <td>$<%= costOfRevenue %></td>
+          <td>Lucro Bruto: </td>
+          <td>$<%= grossProfit %></td>
+        </tr>
+        <tr>
+          <td>Margem Bruta:</td>
+          <td><%= grossProfitRatio %>%</td>
+          <td>Pesquisa e Desenvolvimento: </td>
+          <td>$<%= researchAndDevExpenes %></td>
+        </tr>
+        <tr>
+          <td>SG&A:</td>
+          <td>$<%= sgAndAdmin %></td>
+          <td>Receitas Financeiras: </td>
+          <td>$<%= interestIncome  %></td>
+        </tr>   
+        <tr>
+          <td>Despesas Financeiras:</td>
+          <td>$<%= interestExpense %></td>
+          <td>Depreciação e Amortização: </td>
+          <td>$<%= depreciationAndAmortization %></td>
+        </tr>
+        <tr>
+          <td>EBITDA:</td>
+          <td>$<%= ebitda %></td>
+          <td>Margem EBITDA: </td>
+          <td><%= ebitdaRatio %>%</td>
+        </tr>
+        <tr>
+            <td>Lucro Operacional:</td>
+            <td>$<%= operatingIncome %></td>
+            <td>Margem Operacional: </td>
+            <td><%= operatingIncomeRatio %>%</td>
+        </tr>
+        <tr>
+            <td>Lucro antes do IR:</td>
+            <td>$<%= incomeBeforeTax %></td>
+            <td>Imposto a Pagar: </td>
+            <td>$<%= incomeTaxExpense %></td>
+        </tr>
+        <tr>
+            <td>Lucro Líquido:</td>
+            <td>$<%= netIncome %></td>
+            <td>Margem Líquida: </td>
+            <td><%= netIncomeRatio %>%</td>
+        </tr>
+        
+      </table>
+
+      <form action="/">
+        <button class="btn"> Search again ⬅ </button>
+      </form>
+
+
+
+
+</body>
+
+    <footer>
+      © Copyright 2022 Breno Bonani 
+    </footer>
+
+</html>

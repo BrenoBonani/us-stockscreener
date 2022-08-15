@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <title>Annual Ratios</title>
+    <link rel="stylesheet" href="css/result.css">
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+    <table class="container-table">
+        <tr class="box-sheet">
+          <td>Ticker:</td>
+          <td><%= symbol %></td>
+          <td>Data: </td>
+          <td><%= date %></td>
+        </tr>
+        <tr>
+          <td>Valor de Firma (EV):</td>
+          <td>$<%= enterpriseValue %></td>
+          <td>Valor de Mercado: </td>
+          <td>$<%= marketCap %></td>
+        </tr>
+        <tr>
+          <td>Receita por Ação:</td>
+          <td>$<%= revenuePerShare %></td>
+          <td>VPA: </td>
+          <td>$<%= bookValuePerShare %></td>
+        </tr>
+        <tr>
+          <td>P/L:</td>
+          <td><%= peRatio %>x</td>
+          <td>P/VPA: </td>
+          <td><%= priceBookRatio %>x</td>
+        </tr>
+        <tr>
+          <td>P/S:</td>
+          <td><%= priceSalesRatio %>x</td>
+          <td>EV/S: </td>
+          <td><%= evToSales  %>x</td>
+        </tr>   
+        <tr>
+          <td>Free Cash Flow to Yield:</td>
+          <td><%= fcfToYield %>%</td>
+          <td>ROE (Annual): </td>
+          <td><%= roeRatio %>%</td>
+        </tr>
+        <tr>
+          <td>ROIC (Annual):</td>
+          <td><%= roicRatio %>%</td>
+          <td>Dívida/PL: </td>
+          <td><%= debtToEquity %>%</td>
+        </tr>
+          <tr>
+            <td>Dívida Líquida/EBITDA:</td>
+            <td>$<%= netDebtToEbitda %>x</td>
+            <td>Líquidez Corrente: </td>
+            <td><%= currentRatio %></td>
+          </tr>
+          <tr>
+            <td>Payout:</td>
+            <td><%= payOutRatio %>%</td>
+            <td>Dividendos Yield: </td>
+            <td><%= dividendYield %>%</td>
+          </tr>
+        
+      </table>
+
+      <form action="/">
+        <button class="btn"> Search again ⬅ </button>
+      </form>
+
+
+
+
+</body>
+
+    <footer>
+      © Copyright 2022 Breno Bonani 
+    </footer>
+
+</html>
