@@ -21,7 +21,9 @@ https.get(url, function(response){
     
 
     response.on("data", function(data){
-        const financialData = JSON.parse(data);
+
+        async function run() {
+        const financialData = await JSON.parse(data);
         console.log(financialData);
 
         // overview company
@@ -56,6 +58,9 @@ https.get(url, function(response){
         changeOnDay: changeOnDay, sharesOutstanding: sharesOutstanding, volume: volume, 
         avgVolume: avgVolume, priceAvg50: priceAvg50, priceAvg200: priceAvg200, 
         EPS: EPS, PE: PE, earningsDate: earningsDate});
+        }
+
+        run().catch(e => res.sendFile(__dirname + "/failure.html"));
     });  
 });
 });

@@ -21,7 +21,9 @@ https.get(url, function(response){
     
 
     response.on("data", function(data){
-        const financialData = JSON.parse(data);
+
+        async function run() {
+        const financialData = await JSON.parse(data);
         console.log(financialData);
 
         // overview company
@@ -54,6 +56,9 @@ https.get(url, function(response){
             priceSalesRatio: priceSalesRatio, evToSales: evToSales, fcfToYield: fcfToYield, roeRatio: roeRatio, roicRatio: roicRatio,
             debtToEquity: debtToEquity, netDebtToEbitda: netDebtToEbitda, dividendYield: dividendYield, payOutRatio: payOutRatio, 
             currentRatio: currentRatio});
+        }
+
+        run().catch(e => res.sendFile(__dirname + "/failure.html"));
     });  
 });
 });

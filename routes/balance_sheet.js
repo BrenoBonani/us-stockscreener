@@ -20,7 +20,9 @@ https.get(url, function(response){
 
 
     response.on("data", function(data){
-        const financialData = JSON.parse(data);
+
+        async function run(){
+        const financialData = await JSON.parse(data);
         console.log(financialData);
 
         // overview company
@@ -50,7 +52,10 @@ https.get(url, function(response){
             shortTermInvestments: shortTermInvestments, longTermInvestments: longTermInvestments, 
             longTermDebt: longTermDebt, shortTermDebt: shortTermDebt, netDebt: netDebt, totalEquity: totalEquity,
             totalAssets: totalAssets, totalLiabilities: totalLiabilities});
-    });  
+        }
+
+        run().catch(e => res.sendFile(__dirname + "/failure.html"));
+    });
 });
 });
 }
