@@ -2,11 +2,7 @@
 const app = require("./config/server");
 
 
-// app & post routes
-const overview = require("./routes/overview")(app);
-const balance_sheet = require("./routes/balance_sheet")(app); 
-const earnings = require("./routes/earnings")(app);
-const ratio = require("./routes/ratio")(app);
+
 
 
 app.get("/", function(req, res){
@@ -15,7 +11,11 @@ app.get("/", function(req, res){
 
 });
 
-
+// app & post routes
+const overview = require("./routes/overview")(app);
+const balance_sheet = require("./routes/balance_sheet")(app); 
+const earnings = require("./routes/earnings")(app);
+const ratio = require("./routes/ratio")(app);
 
 // app listen
 app.listen(process.env.PORT || 3000, function(){
