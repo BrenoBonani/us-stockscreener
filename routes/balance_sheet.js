@@ -18,7 +18,6 @@ app.post("/balance_sheet", (req, res) => {
 https.get(url, function(response){
     console.log(response);
 
-    
 
     response.on("data", function(data){
         const financialData = JSON.parse(data);
@@ -43,10 +42,9 @@ https.get(url, function(response){
         const totalAssets = financialData[0].totalAssets.toLocaleString();
         const totalLiabilities = financialData[0].totalLiabilities.toLocaleString();
     
-        
 
-      
-   
+
+
         res.render("balance_sheet", {fYear: fYear, symbol: symbol, reportedCurrency: reportedCurrency, 
             cashAndEquivalents: cashAndEquivalents, invetory: invetory, netReceivables: netReceivables, 
             shortTermInvestments: shortTermInvestments, longTermInvestments: longTermInvestments, 
