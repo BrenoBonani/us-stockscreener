@@ -1,7 +1,7 @@
 // server config 
 const app = require("./config/server");
 
-
+const port = process.env.PORT || 3000;
 
 
 
@@ -18,7 +18,5 @@ const earnings = require("./routes/earnings")(app);
 const ratio = require("./routes/ratio")(app);
 
 // app listen
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server is running on port 3000");
-});
+app.listen(port, () => console.log(`Server is running on ${port}`));
 
